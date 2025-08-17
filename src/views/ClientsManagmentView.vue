@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import MainContent from '@/components/MainContent.vue'
-import SideMenu from '@/components/SideMenu.vue'
+import BaseLayout from '@/layouts/BaseLayout.vue'
 </script>
 
 <template>
-  <div class="main-container">
-    <SideMenu />
-    <MainContent />
-  </div>
+  <BaseLayout>
+    <div class="main-container">
+      <MainContent />
+    </div>
+  </BaseLayout>
 </template>
 
 <style scoped>
