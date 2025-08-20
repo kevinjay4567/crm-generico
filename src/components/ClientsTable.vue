@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { reactive, ref, onMounted } from 'vue'
-import { initFlowbite } from 'flowbite'
+import { reactive, ref, type Ref } from 'vue'
 
 type Client = {
   id: number
@@ -10,8 +9,8 @@ type Client = {
   country: string
 }
 
-const showNewClientForm = ref(true)
-const clients = ref([
+const showNewClientForm: Ref<boolean> = ref(true)
+const clients: Ref<Array<Client>> = ref([
   {
     id: 1,
     name: 'Cliente 1',
@@ -20,16 +19,12 @@ const clients = ref([
     country: 'Colombia',
   },
 ])
-const newClient = reactive<Client>({
+const newClient: Client = reactive({
   id: 0,
   name: 'Nombre Cliente',
   phone: 0,
   email: 'email@example.com',
   country: 'Pais del cliente',
-})
-
-onMounted(() => {
-  initFlowbite()
 })
 </script>
 
