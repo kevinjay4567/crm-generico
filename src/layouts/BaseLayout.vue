@@ -5,7 +5,9 @@ import SideMenu from '@/components/SideMenu.vue'
 <template>
   <div class="main-container">
     <SideMenu />
-    <slot></slot>
+    <div class="p-4 sm:ml-64">
+      <slot></slot>
+    </div>
   </div>
 </template>
 

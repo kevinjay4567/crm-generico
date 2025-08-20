@@ -5,15 +5,6 @@ import BaseLayout from '@/layouts/BaseLayout.vue'
 
 <template>
   <BaseLayout>
-    <div class="main-container">
-      <MainContent />
-    </div>
+    <MainContent />
   </BaseLayout>
 </template>
-
-<style scoped>
-.main-container {
-  display: flex;
-  gap: 100px;
-}
-</style>
