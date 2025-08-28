@@ -1,18 +1,14 @@
 <script setup lang="ts">
-import SideMenu from '@/components/SideMenu.vue'
+import MainHeader from '@/components/MainHeader.vue';
+import NavBar from '@/components/NavBar.vue';
 </script>
 
 <template>
-  <div class="main-container">
-    <SideMenu />
-    <div class="p-4 sm:ml-64">
+  <div>
+    <MainHeader />
+    <div class="pt-10 pl-10 lg:pr-32 flex flex-col gap-5">
+      <NavBar />
       <slot></slot>
     </div>
   </div>
 </template>
-
-<style scoped>
-.main-container {
-  display: flex;
-}
-</style>
